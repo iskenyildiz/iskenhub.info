@@ -3,4 +3,4 @@ layout: page
 title: About
 ---
 
-https://github.com/iskenyildiz
+[Github](https://github.com/iskenyildiz)
