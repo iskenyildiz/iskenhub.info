@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "VLAN_Trunk"
+title:  "VLAN Tagging using a Cisco Layer 3 Switch"
 date:   2019-09-11 17:31:21 +0300
 categories: jekyll update
 ---
 
-# VLAN Tagging using a Cisco Layer 3 Switch
+
 
 For this project we will be tagging the two VLANs configured inside both Ubuntu 18.04 Servers.
 
