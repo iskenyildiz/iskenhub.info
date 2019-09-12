@@ -7,7 +7,7 @@ categories: jekyll update
 
 
 
-# VLAN
+
 
 # VIRTUAL LOCAL AREA NETWORK
 VLAN is the technology where we can connect a number of virtual LANs in order to make a LAN ecosystem.
