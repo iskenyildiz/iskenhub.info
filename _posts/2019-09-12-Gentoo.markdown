@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 
-# Gentoo
+
 
 Gentoo is a Linux distribution which is compiled from source code and the user gets to decide which configure and compile options are used for each and every package. 
 
