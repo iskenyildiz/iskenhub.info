@@ -5,7 +5,7 @@ date:   2019-09-11 17:31:21 +0300
 categories: jekyll update
 ---
 
-# ANSIBLE 
+
 
  Ansible is an open source automation tool. Ansible Tower is a visualized interface for Ansible.
 Ansible is agentless, meaning no additional software is needed unlike Zabbix which has you installing client software to be able to communicate and hosts can only be accessed through SSH, which makes it more secure than the other. This means that any computer that you can administer through SSH, you can also administer through Ansible. Ansible configurations are mainly written in YAML format since it’s more popular.
