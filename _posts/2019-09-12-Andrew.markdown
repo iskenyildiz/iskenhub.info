@@ -7,7 +7,6 @@ categories: jekyll update
 
 
 
-# Modern Operating Systems 4th Edition--Andrew Tanenbaum
 
  
 # Notes:
