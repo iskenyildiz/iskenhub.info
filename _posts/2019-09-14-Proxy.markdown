@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is a Proxy server? How to configure a highly available load balancing HAproxy in Ubuntu 18.04"
+title:  "What is a Proxy server? How to configure a highly available load balancer using HAproxy  in Ubuntu 18.04"
 date:   2019-09-11 17:31:21 +0300
 categories: jekyll update
 ---
