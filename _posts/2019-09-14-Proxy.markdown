@@ -139,9 +139,10 @@ sudo nano  /etc/sysctl.conf
 
 inside add
 
-`
+``
 net.ipv4.ip_nonlocal_bind=1
-`
+``
+
 and run `sysctl -p`
 
 then go to ` sudo nano /etc/keepalived/keepalived.conf`
