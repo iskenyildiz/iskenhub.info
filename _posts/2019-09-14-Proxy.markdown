@@ -128,7 +128,7 @@ https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configura
 Keepalive is a tool used to redirect the server to the slave in case of a master server shutdown or crash.
 
 `
-sudo apt install keepalive
+sudo apt install keepalived
 ` 
 
 then make it allow ipv4
@@ -172,7 +172,7 @@ vrrp_instance VI_1 {
 do the same steps for the slave haproxy server but change the priority to '100' and state to 'BACKUP'.
 
 `
-systemctl start keepalive
+systemctl start keepalived
 `
 
 `ip addr sh enp0s3` to apply the changes and you should see the virtual address on the master server.
