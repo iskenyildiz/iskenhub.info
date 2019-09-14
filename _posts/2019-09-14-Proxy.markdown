@@ -145,7 +145,11 @@ net.ipv4.ip_nonlocal_bind=1
 
 and run `sysctl -p`
 
-then go to ` sudo nano /etc/keepalived/keepalived.conf`
+then go to
+
+` 
+sudo nano /etc/keepalived/keepalived.conf
+`
 
 if it's not created create it and add:
 
