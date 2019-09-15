@@ -156,7 +156,7 @@ inside add
 net.ipv4.ip_nonlocal_bind=1
 `
 
-We do this to bind an IP address to the system that is not assigned to a device on the local system(Virtual IP).
+We do this to bind an IP address to the system that is not assigned to a device on the local system(Virtual IP). Using this lets us assign Virtual IP on the haproxy.cfg 
 
 and run `sysctl -p`
 
