@@ -104,7 +104,7 @@ listen firstbalance
         bind 192.168.185.7:80
         balance roundrobin
         option forwardfor
-        modee http
+        mode http
         server webserver1 Your-Webserver1-IP:80 
         server webserver2 Your-Webserver2-IP:80 
 ```
