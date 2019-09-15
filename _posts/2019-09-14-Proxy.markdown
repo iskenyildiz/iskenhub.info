@@ -95,6 +95,10 @@ The frontend is used to accept requests from clients by  binding the haproxy to 
 
 backend section is the servers that fulfill the requests.
 
+`mode http` will make sure the server is http request based and load balances on the layer 7.
+
+The X-Forwarded-For(`option forwardfor`) request header helps you identify the IP address of a client when you use an HTTP or HTTPS load balancer. Because load balancers intercept traffic between clients and servers, your server access logs contain only the IP address of the load balancer. To see the IP address of the client, use the X-Forwarded-For request header.
+
 Next see if you made any syntax errors.
 
 You can use `listen` as an alternative to merge frontend and backend into one.
