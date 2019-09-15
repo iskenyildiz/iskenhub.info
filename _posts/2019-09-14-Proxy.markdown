@@ -56,7 +56,16 @@ VPNs are good for masking your activity online. In contrast, a proxy server does
 
 # Configuring HAProxy for HTTP load balancing
 
-first update your system
+Systems being used for this configuration:
+
+### HaProxy Load Balancer 1: 192.168.185.7
+### HaProxy Load Balancer 2: 192.168.185.8
+### Apache Web Server: 192.168.185.3
+### Nginx Web Server: 192.168.185.4
+### Virtual(Floating) IP: 192.168.185.10
+
+
+First update your system.
 
 `sudo apt update
 `
