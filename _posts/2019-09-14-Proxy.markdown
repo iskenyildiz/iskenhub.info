@@ -155,6 +155,9 @@ inside add
 `
 net.ipv4.ip_nonlocal_bind=1
 `
+
+We do this to bind an IP address to the system that is not assigned to a device on the local system(Virtual IP).
+
 and run `sysctl -p`
 
 then go to ` sudo nano /etc/keepalived/keepalived.conf`
