@@ -151,7 +151,7 @@ Change username and password with your own and then head to http://192.168.185.7
 
 [![Screenshot-from-2019-09-16-14-33-13.png](https://i.postimg.cc/3NF1Rmxt/Screenshot-from-2019-09-16-14-33-13.png)](https://postimg.cc/PvNYVLZD)
 
-[https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/] for more information about the config files.
+[https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/](https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/) for more information about the config files.
 
 # Highly Available Load Balancer using Keepalived
 
