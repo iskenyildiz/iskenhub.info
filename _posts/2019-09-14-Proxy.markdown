@@ -125,6 +125,7 @@ listen firstbalance
 haproxy -c -f /etc/haproxy/haproxy.cfg
 `
 
+
 Restart haproxy 
 
 `
@@ -132,6 +133,22 @@ sudo systemctl restart haproxy
 `
 
 then go to http://192.168.185.7 and keep reloading the site to see both web servers you declared.
+
+OPTIONAL: If you want to see the statistics of the cluster you can add the following to your haproxy.cfg file.
+
+
+```
+listen stats
+    bind :32700
+    stats enable
+    stats uri /
+    stats hide-version
+    stats auth username:password
+```
+
+Change username and password with your own and then head to http://192.168.185.7:32700
+
+[![Screenshot-from-2019-09-16-13-46-32.png](https://i.postimg.cc/L8M1YtRB/Screenshot-from-2019-09-16-13-46-32.png)](https://postimg.cc/6yY3FG8y)
 
 https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/ for more information about the config files.
 
