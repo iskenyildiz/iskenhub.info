@@ -142,12 +142,12 @@ OPTIONAL: If you want to see the statistics of the cluster you can add the follo
 listen stats
     bind :32700
     stats enable
-    stats uri /
+    stats uri /stats
     stats hide-version
     stats auth username:password
 ```
 
-Change username and password with your own and then head to http://192.168.185.7:32700
+Change username and password with your own and then head to http://192.168.185.7/stats
 
 [![Screenshot-from-2019-09-16-14-33-13.png](https://i.postimg.cc/3NF1Rmxt/Screenshot-from-2019-09-16-14-33-13.png)](https://postimg.cc/PvNYVLZD)
 
