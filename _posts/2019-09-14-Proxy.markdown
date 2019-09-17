@@ -201,6 +201,10 @@ vrrp_instance VI_1 {
         }
 }
 ```
+
+ VRRP(Virtual Router Redundancy Protocol) is used when electing an active router called the Master among a group of routers that stores a configured virtual IP and MAC address.
+ 
+ 
 `script "killall -0 haproxy"` checks haproxy service every 2 seconds and if the service is available adds '2' to the priority.
 
 do the same steps for the slave haproxy server but change the priority to '100' and state to 'BACKUP'.
