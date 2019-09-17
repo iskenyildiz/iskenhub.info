@@ -114,7 +114,7 @@ You can use `listen` as an alternative to merge frontend and backend into one.
 
 ```
 listen firstbalance
-        bind 192.168.185.7:80
+        bind 192.168.185.7:80 # to allow all the addresses on the host including the Virtual IP, use '*'.
         balance roundrobin
         option forwardfor
         option httpchk HEAD / HTTP/1.1\r\nHost:localhost #lets us see the statistics of the webservers.
