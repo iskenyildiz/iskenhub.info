@@ -100,6 +100,25 @@ backend my_webs
     server web1.com 192.168.185.3:80
     server web2.com 192.168.185.4:80
 ```
+
+Say you have a path that you want haproxy redirect to you can do so by adding ACL(Access control Link)
+
+```
+listen firstbalance
+        bind *:80
+        balance roundrobin
+        option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+        acl url_static path_beg /blog #defines path to redirect to.
+        use_backend static if url_static # redirect to the path if /blog is used.
+        server webserver1 192.168.56.104:80 check
+        server webserver2 192.168.56.103:80 check
+backend static
+        http-request set-path %[path,regsub(^/blog/?,/)] #create the path for the Address.
+        server nginx 192.168.56.102
+
+```
+Now if we use 192.168.185.7/blog it will automatically go to the nginx server we specified.
+
 The frontend is used to accept requests from clients by  binding the haproxy to the IP address that will be the floating(Virtual) IP which will keep redirecting to those two servers using the round robin balancing method which will be going back and forth using a round table method.
 
 backend section is the servers that fulfill the requests.
