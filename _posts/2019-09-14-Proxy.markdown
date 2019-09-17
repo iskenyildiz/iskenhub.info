@@ -45,6 +45,10 @@ VPNs are good for masking your activity online. In contrast, a proxy server does
  HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP (layer 4 and layer 7) Load Balancer and proxying solution which can be run on Linux.
  
  [![ha-diagram-animated.gif](https://i.postimg.cc/g0f7g6TJ/ha-diagram-animated.gif)](https://postimg.cc/8Fmw5sDQ)
+ 
+ For more information about Layer 4 and Layer 7 load balancing, visit [https://www.nginx.com/resources/glossary/layer-4-load-balancing/](https://www.nginx.com/resources/glossary/layer-4-load-balancing/)
+ 
+ But simply, a layer 4 load balancer determines the routing decisions based on the TCP headers whereas Layer 7 load balancer routes depending on the characteristics of the HTTP headers.
 
 ## Load Balancing Methods
 
