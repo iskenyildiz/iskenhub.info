@@ -48,6 +48,8 @@ VPNs are good for masking your activity online. In contrast, a proxy server does
  
  For more information about Layer 4 and Layer 7 load balancing, visit [https://www.nginx.com/resources/glossary/layer-4-load-balancing/](https://www.nginx.com/resources/glossary/layer-4-load-balancing/)
  
+ [https://www.nginx.com/resources/glossary/layer-7-load-balancing/](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)
+ 
  But simply, a layer 4 load balancer determines the routing decisions based on the TCP headers whereas Layer 7 load balancer routes depending on the characteristics of the HTTP headers. L7 Load balancing will allow us access HTTP related features such as cookies which are sent to the clients browser and stored there(contents in a shopping cart).
 
 ## Load Balancing Methods
