@@ -35,7 +35,7 @@ INSERT INTO mysql.user (Host,User,ssl_cipher,x509_issuer,x509_subject) values ('
 
 FLUSH PRIVILEGES;
 ```
-
+I've added the ciphers because it was needed for me to be able to create a user. You can disable ssl option on the mysql config files if you do not want to add the cipher.
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'haproxy_root'@'192.168.56.101' IDENTIFIED BY 'password' WITH GRANT OPTION; 
