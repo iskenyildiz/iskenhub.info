@@ -88,7 +88,8 @@ listen mysql-cluster
     option mysql-check user haproxy_checker
     balance roundrobin
     server mysql1 192.168.56.102:3306 check
-    server mysql2 192.168.56.103:3306 check # add 'weight 2' if you want the load balancer to redirect two times before going back to server1.
+    server mysql2 192.168.56.103:3306 check backup # add 'weight 2' if you want the load balancer to redirect two times before going back to server1. 
+# 'backup' is used to ensure only the primary server is the master and data write only happens to primary until failover forwards the service to mysql2.
 listen stats
     bind *:80
     mode http
