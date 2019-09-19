@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Configuring HAProxy to Load Balance MYSQL Servers on Ubuntu 18.04"
+date:   2019-09-19 11:31:21 +0300
+categories: jekyll update
+---
 
 
 We did load balancing for HTTP. What if we need to load balance a cluster of databases? We would need a way to be able to direct the requests for each database.
