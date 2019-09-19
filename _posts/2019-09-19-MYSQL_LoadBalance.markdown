@@ -97,6 +97,8 @@ listen stats
     stats auth Username:YourPassword # change username and password for yourself
     
 ```
+We binded loopback because the mysql client service is on the same host as haproxy. Mysql doesn't have a specific mode so we use tcp since it is more than enough to be able to monitor the systems.
+
 You can go to http://192.168.56.101:8080 to see the statistics page which you enabled tracking by declaring the user 'haproxy_checker'.
 
 You can either see if load balancing works by looking at databases if you created on either of the machines.
