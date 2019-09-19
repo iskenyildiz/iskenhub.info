@@ -89,8 +89,7 @@ listen mysql-cluster
     balance roundrobin
     server mysql1 192.168.56.102:3306 check
     server mysql2 192.168.56.103:3306 check backup # add 'weight 2' if you want the load balancer to redirect two times before going back to server1. 
-# 'backup' is used to ensure only the primary server is the master and data write only happens to primary until failover forwards the service to mysql2.
-listen stats
+# 'backup' is used to ensure that as long as the primary is available, HAProxy should always direct traffic to it.
     bind *:80
     mode http
     stats enable
