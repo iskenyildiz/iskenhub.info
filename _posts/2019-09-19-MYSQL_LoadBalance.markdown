@@ -125,8 +125,9 @@ Sep 19 11:17:50 localhost haproxy[13041]: Server mysql-cluster/mysql1 is DOWN, r
 
 Means you can monitor the availability of the servers.
 
+Useful links:
 
-
+[https://www.haproxy.com/documentation/aloha/10-0/traffic-management/lb-layer7/health-checks/](https://www.haproxy.com/documentation/aloha/10-0/traffic-management/lb-layer7/health-checks/)
 
 
 
