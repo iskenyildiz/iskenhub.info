@@ -57,7 +57,7 @@ Now we want to install MYSQL Client on the HAProxy server for monitoring the mys
 
 We can query databases with our 'haproxy_user' that we declared previously 
 
-` mysql -h 10.0.0.1 -u haproxy_root -p -e "SHOW DATABASES"`
+` mysql -h 192.168.56.102 -u haproxy_root -p -e "SHOW DATABASES"`
 
 If you cannot reach the server you might need to go and edit
 
