@@ -89,7 +89,8 @@ listen mysql-cluster
     balance roundrobin
     server mysql1 192.168.56.102:3306 check
     server mysql2 192.168.56.103:3306 check # add 'weight 2' if you want the load balancer to redirect two times before going back to server1.
-listen 0.0.0.0:8080
+listen stats
+    bind *:80
     mode http
     stats enable
     stats uri /
