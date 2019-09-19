@@ -30,18 +30,18 @@ The other user 'haproxy_root' is used to access the sql privileges for queries s
 
 inside:
 
-``
+```
 INSERT INTO mysql.user (Host,User,ssl_cipher,x509_issuer,x509_subject) values ('192.168.56.101','haproxy_checker','','','');
 
 FLUSH PRIVILEGES;
-``
+```
 
 
-``
+```
 GRANT ALL PRIVILEGES ON *.* TO 'haproxy_root'@'192.168.56.101' IDENTIFIED BY 'password' WITH GRANT OPTION; 
 
 FLUSH PRIVILEGES;
-``
+```
 
 Next we want to give server IDs to the machines since they might be declared as '0'.
 
@@ -80,7 +80,8 @@ add the following under the global section.
 
 Next add the listen blocks.
 
-``
+```
+
 listen mysql-cluster
     bind 127.0.0.1:3306
     mode tcp
@@ -94,7 +95,7 @@ listen 0.0.0.0:8080
     stats uri /
     stats auth Username:YourPassword # change username and password for yourself
     
-``
+```
 You can go to http://192.168.56.101:8080 to see the statistics page which you enabled tracking by declaring the user 'haproxy_checker'.
 
 You can either see if load balancing works by looking at databases if you created on either of the machines.
@@ -113,7 +114,7 @@ mysql -h 127.0.0.1 -u haproxy_root -p -e "show variables like 'server_id'"
 
 do this many times and you will notice the change of the server IDs.
 
-Now if you stop a mysql server and head into `tail -f /var/log/haproxy.log` you will see a message indicating.
+Now if you stop a mysql server and head into `tail -f /var/log/haproxy.log` you will see a message indicating:
 
 ```
 Sep 19 11:17:50 localhost haproxy[13041]: Server mysql-cluster/mysql1 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
