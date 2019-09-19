@@ -63,7 +63,7 @@ If you cannot reach the server you might need to go and edit
 
 ` sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf` 
 
-and comment out ` bind=127.0.0.1`
+and comment out `bind=127.0.0.1`
 
 After that go to the haproxy config file
 
