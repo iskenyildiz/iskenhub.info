@@ -220,3 +220,5 @@ A Job creates a pod which runs a single task to completion.
 https://matthewpalmer.net/kubernetes-app-developer/articles/how-does-kubernetes-use-etcd.html
 
 https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
+
+[https://medium.com/faun/the-description-of-the-kubernetes-deployment-fields-7dc942237a73](https://medium.com/faun/the-description-of-the-kubernetes-deployment-fields-7dc942237a73)
