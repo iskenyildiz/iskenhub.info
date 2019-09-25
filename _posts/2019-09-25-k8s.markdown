@@ -144,11 +144,14 @@ Let's take a look at the components used in the file.
 ## apiVersion
 Defines the API version of the deployment object. There are three versions of APIs.
 
- ### Alpha:
- This is the early release candidate. It might contain bugs and there is no guarantee that it will work in the future. Example: scalingpolicy.kope.io/v1alpha1
- ### Beta: 
+### Alpha:
+
+This is the early release candidate. It might contain bugs and there is no guarantee that it will work in the future. Example: scalingpolicy.kope.io/v1alpha1
+### Beta:
+
  The API’s become beta once its alpha tested. It will be in continuous development & testing until it becomes stable. Beta versions will most likely go into the Kubernetes main APIs. Example: batch/v1beta1
  ### Stable: 
+ 
  The APIs which does not contain alpha and beta goes into the stable category. Only stable versions are recommended to be used in production systems. Example: apps/v1
 
 ## Kind
@@ -160,9 +163,13 @@ Metadata is a set of data to uniquely identify a Kubernetes object.
 Types of metadata are as follows:
 
 labels: Key-value pairs primarily used to group and categorize deployment object.
+
 name: Represents the name of the deployment to be created.
+
 namespace: Name of the namespace where you want to create the deployment.
+
 annotations:  key-value pairs like labels, however, used for different use cases.
+
 
 ## spec
  It is where we define the actual desired behavior of the Kubernetes Deployment. 
