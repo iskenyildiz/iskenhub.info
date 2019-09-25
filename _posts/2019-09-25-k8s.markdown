@@ -150,9 +150,8 @@ This is the early release candidate. It might contain bugs and there is no guara
 ### Beta:
 
  The API’s become beta once its alpha tested. It will be in continuous development & testing until it becomes stable. Beta versions will most likely go into the Kubernetes main APIs. Example: batch/v1beta1
- ### Stable: 
- 
- The APIs which does not contain alpha and beta goes into the stable category. Only stable versions are recommended to be used in production systems. Example: apps/v1
+### Stable: 
+The APIs which does not contain alpha and beta goes into the stable category. Only stable versions are recommended to be used in production systems. Example: apps/v1
 
 ## Kind
 Kind describes the type of the object/resource to be created.
