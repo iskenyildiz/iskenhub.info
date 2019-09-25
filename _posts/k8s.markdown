@@ -1,4 +1,4 @@
-Kubernetes 
+# Kubernetes 
 
 Kubernetes also known as k8s is an open source management system for containerized applications in a clustered environment created by Google.
 
@@ -13,11 +13,11 @@ A node is the other machine in the cluster which is responsible for running work
 
 Users interact with the cluster by the main API server directly or through clients with libraries. The commands are submitted in JSON or YAML files.
 
-Master Server Components
+# Master Server Components
 
 The master server acts as a primary control node for Kubernetes clusters.
 
-etcd
+## etcd
 
 
 Kubernetes uses etcd as how an application uses a database. Configuration data, state, and metadata are stored in etcd, but Kubernetes is a distributed system that runs on one master and several worker nodes so etcd is a distributed database. 	
@@ -29,66 +29,59 @@ etcd is a key-value database just like a NOSQL database but the similarities sto
 etcd does not have various data types. It is made to store only kubernetes objects. But redis and other key-value stores have data-type flexibility.
 
 Since all the cluster data is stored in etcd, it is important to always have a backup plan to restore it in case of emergency.
+[![etcd-diagram.png](https://i.postimg.cc/Wbpjnx35/etcd-diagram.png)](https://postimg.cc/5jrZ978z)
 
-kube-apiserver
+## kube-apiserver
 
 This is the main management point of the entire cluster as it allows a user to configure Kubernetes’ workloads and organizational units. A client called kubectl is available as a default method of interacting with the Kubernetes cluster from a local computer.
 
-kube-controller-manager
+## kube-controller-manager
 
 Controller manager manages different controllers that regulate the state of the cluster, manage workload life cycles, and perform routine tasks. When a change is seen, the controller reads the new information and implements the procedure that fulfills the desired state.
 
 
-kube-scheduler
+## kube-scheduler
 
 Scheduler is the actual component that assigns workloads to the nodes in the cluster. 
 
 Once a pod is created, the scheduler notices that the pod isn’t assigned to a node and it assings the posd to an available node. Scheduler doesn’t run the pod. The scheduler is also responsible of tracking available capacity on each node and makes sure they aren’t scheduled above their available resources.
 
+[![0-r3-Dy-Rv-MZJ-LUC9w4.png](https://i.postimg.cc/HnxZJ0Y9/0-r3-Dy-Rv-MZJ-LUC9w4.png)](https://postimg.cc/0MTdFwJz)
 
+# Node Server Components
 
-
-
-
-
-
-
-Node Server Components
-
-A Container Runtime
-
-
+## A Container Runtime
 
 The first component is a container runtime. A container runtime is software that executes containers and manages container images on a node. This requirement is satisfied by Docker or rkt.
 
-kubelet
+##kubelet
 
 The kubelet is the primary “node agent” that runs on each node.  Kubelet works with Pod Specs. A pod spec is a YAML or JSON object that describes a pod. Kubelet makes sure the pod specs are running and healthy.
 
-kube-proxy
+## kube-proxy
 
 Kube-proxy is one of the most important node components that participates in managing Pod-to-Service and External-to-Service networking. The difference between the kube-proxy and a normal reverse proxy is that the kube-proxy proxies requests to Kubernetes Services and their backend Pods, not hosts.
 
 
-Kubernetes Objects and Workloads
+# Kubernetes Objects and Workloads
 
 
 Instead of managing containers directly, users interact with Kubernetes objects.
 
 
-Pods
+## Pods
 
 A Kubernetes pod is a or  group of containers that are deployed together on the same host.
 Pods are useful because containers in the same pod share their lifecycle and storage resources. 
 
 
-Replication Controllers and Replication Sets
+## Replication Controllers and Replication Sets
 
 When working with Kubernetes we mostly will be working with more than one pod. A replication controller is an object that creates identical replicas of pods horizontally by increasing or decreasing the number of copies. It also makes sure the number of pods deployed match the number of pods declared in the configuration.
 
 Replication set is the advanced version of the controller which is beginning to replace the controller over time with easier management of the pods to be managed.
 
-Deployments
+## Deployments
 
 Deployments are one of the most common workloads to directly create and manage. 
 
@@ -144,7 +137,7 @@ spec:
 
 
 
-Services
+## Services
 
 A service is used to allow network access to a set of pods.
 An example of service.yaml:
@@ -169,56 +162,19 @@ spec:
 
 
 
+[![service-vs-deployment.png](https://i.postimg.cc/c437Fkb8/service-vs-deployment.png)](https://postimg.cc/7fxT69Dx)
 
 
 
 
-
-Jobs
+## Jobs
 
 A Job creates a pod which runs a single task to completion.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Resources: 
 
 https://matthewpalmer.net/kubernetes-app-developer/articles/how-does-kubernetes-use-etcd.html
 
