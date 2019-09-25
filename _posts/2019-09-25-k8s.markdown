@@ -96,7 +96,7 @@ Everyone running applications on Kubernetes cluster uses a deployment.
 It’s what we use to scale, roll out, and roll back versions of our applications.
 With a deployment, we tell Kubernetes how many copies of a Pod we want running. The deployment takes care of everything else.
 
-An example of the deploymen.yaml file:
+An example of the deployment.yaml file:
 
 ```
 apiVersion: apps/v1
@@ -140,7 +140,37 @@ spec:
               value: redis-service
 ```
 
+Let's take a look at the components used in the file.
+## apiVersion
+Defines the API version of the deployment object. There are three versions of APIs.
 
+ ### Alpha:
+ This is the early release candidate. It might contain bugs and there is no guarantee that it will work in the future. Example: scalingpolicy.kope.io/v1alpha1
+ ### Beta: 
+ The API’s become beta once its alpha tested. It will be in continuous development & testing until it becomes stable. Beta versions will most likely go into the Kubernetes main APIs. Example: batch/v1beta1
+ ### Stable: 
+ The APIs which does not contain alpha and beta goes into the stable category. Only stable versions are recommended to be used in production systems. Example: apps/v1
+
+## Kind
+Kind describes the type of the object/resource to be created.
+
+## Metadata 
+Metadata is a set of data to uniquely identify a Kubernetes object.
+
+Types of metadata are as follows:
+
+labels: Key-value pairs primarily used to group and categorize deployment object.
+name: Represents the name of the deployment to be created.
+namespace: Name of the namespace where you want to create the deployment.
+annotations:  key-value pairs like labels, however, used for different use cases.
+
+## spec
+ It is where we define the actual desired behavior of the Kubernetes Deployment. 
+
+### Template 
+Template is a required object that describes the Pods Kubernetes should create as part of the deployment. 
+
+Inside template, spec will have all the container information a pod should have.
 
 ## Services
 
