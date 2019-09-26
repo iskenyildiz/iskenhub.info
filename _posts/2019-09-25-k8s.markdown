@@ -189,7 +189,9 @@ An example of service.yaml:
 Increasing the number of replicas will result in more than one pod running the same application. The server will load balance itself and redirections will occur on a regular basis.
 [![Screenshot-from-2019-09-26-10-21-13.png](https://i.postimg.cc/Wb7gRygF/Screenshot-from-2019-09-26-10-21-13.png)](https://postimg.cc/hfffTpCc)
 
+## selector
 
+Selectors are defined to tell the deployment to manage any kind of application with that name.
 
 ```
 kind: Service
