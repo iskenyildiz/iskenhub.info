@@ -183,6 +183,13 @@ Inside template, spec will have all the container information a pod should have.
 A service is used to allow network access to a set of pods.
 An example of service.yaml:
 
+## replicas 
+
+Increasing the number of replicas will result in more than one pod running the same application. The server will load balance itself and redirections will occur on a regular basis.
+[![Screenshot-from-2019-09-26-10-21-13.png](https://i.postimg.cc/Wb7gRygF/Screenshot-from-2019-09-26-10-21-13.png)](https://postimg.cc/hfffTpCc)
+
+
+
 ```
 kind: Service
 apiVersion: v1
