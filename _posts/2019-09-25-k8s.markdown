@@ -7,6 +7,7 @@ categories: jekyll update
 
 Kubernetes also known as k8s is an open source management system for containerized applications in a clustered environment created by Google.
 
+
 The unit of execution that Kubernetes works with is the pod. A pod is a collection of containers that share some resources: they have a single IP, and can share volumes. For example, a web server pod could have a container for the server itself, and a container that tails the logs and ships them off to your logging or metrics infrastructure.
 
 At its base, Kubernetes brings together individual physical or virtual machines into a cluster using a shared network to communicate between each server. This cluster is the physical platform where all Kubernetes components, capabilities, and workloads are configured.
@@ -207,7 +208,30 @@ spec:
 
 ```
 
+### type
 
+## Cluster IP 
+
+A ClusterIP service is the default Kubernetes service. It gives you a service inside your cluster that other apps inside your cluster can access. There is no external access. But you can access the internet using the Kubernetes proxy.
+
+[![1-D7-F7733-BE79-4408-919-C-C9-D8-F8-AF3-A9-E.jpg](https://i.postimg.cc/KzynL3Mw/1-D7-F7733-BE79-4408-919-C-C9-D8-F8-AF3-A9-E.jpg)](https://postimg.cc/bG3DfJL9)
+
+## NodePort
+
+A NodePort service is the most primitive way to get external traffic directly to your service. NodePort, as the name implies, opens a specific port on all the Nodes (the VMs), and any traffic that is sent to this port is forwarded to the service. But you can only one service per port and only 3000-32767 can be used as ports.
+
+[![BDFD96-AE-11-F9-4079-B375-250-FA40-B7-CE9.jpg](https://i.postimg.cc/Y9sMZYzy/BDFD96-AE-11-F9-4079-B375-250-FA40-B7-CE9.jpg)](https://postimg.cc/ftmG03Fx)
+
+## Load Balancer
+Declaring a Service as LoadBalancer exposes it externally, using a cloud provider’s load balancer solution. The cloud provider will provision a load balancer for the Service, and map it to its automatically assigned NodePort. This is the most widely used method in production environments.
+
+[![81-CC04-AA-9585-4-FCD-A53-C-1-C1-CACDCBAB4.jpg](https://i.postimg.cc/9X9QKgsd/81-CC04-AA-9585-4-FCD-A53-C-1-C1-CACDCBAB4.jpg)](https://postimg.cc/7bx4T9Hh)
+
+## Ingress
+
+Ingress is the most useful if you want to expose multiple services under the same IP address, and these services all use the same L7 protocol (typically HTTP). There are many types of Ingress controllers, from the Google Cloud Load Balancer, Nginx, Contour, Istio, and more. 
+
+[![AF5-F301-F-ADDE-4-ED7-9-B80-4-E2-BA51-DA6-DB.png](https://i.postimg.cc/c1BVvQ3q/AF5-F301-F-ADDE-4-ED7-9-B80-4-E2-BA51-DA6-DB.png)](https://postimg.cc/XXX2hBxx)
 
 
 [![service-vs-deployment.png](https://i.postimg.cc/c437Fkb8/service-vs-deployment.png)](https://postimg.cc/7fxT69Dx)
@@ -229,3 +253,5 @@ https://matthewpalmer.net/kubernetes-app-developer/articles/how-does-kubernetes-
 https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
 
 [https://medium.com/faun/the-description-of-the-kubernetes-deployment-fields-7dc942237a73](https://medium.com/faun/the-description-of-the-kubernetes-deployment-fields-7dc942237a73)
+
+[https://kubernetes.io/docs/concepts/services-networking/service/#nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport)
